@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Flexbox Use Cases</title>
+  <meta viewport content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: darkblue;
+    }
+
+    nav {
+      display: flex;
+      justify-content:space-between;
+      background: lightgray;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .center-container {
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      height: 200px;
+      border: 2px solid black;
+      margin-top: 10px;
+    }
+    .center-box {
+      background: lightblue;
+      padding: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+    }
+    .col {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid gray;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap:wrap;
+      margin-top: 10px;
+    }
+    .card {
+      flex: 1 1 100px;
+      margin: 10px;
+      padding: 20px;
+      background: lightcoral;
+      text-align: center;
+      color: white;
+    }
+
+    .layout {
+      display: flex;
+      margin-top: 10px;
+    }
+    .sidebar {
+      flex: 1;
+      background: lightgray;
+      padding: 20px;
+    }
+    .content {
+      flex: 3;
+      background: lightblue;
+      padding: 20px;
+    }
+
+
+    .space-between {
+      display: flex;
+      justify-content:space-around;
+      background: #eee;
+      padding: 10px;
+    }
+    .space-between div {
+      background: lightseagreen;
+      color: white;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    .column-container {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid #333;
+      height: 200px;
+    }
+    .column-container div {
+      flex: 1;
+      background: lightpink;
+      margin: 10px;
+      text-align: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>1. Navigation Bar</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <h2>2. Centering Content</h2>
+  <div class="center-container">
+    <p class="center-box">I’m perfectly centered!</p>
+  </div>
+
+  <h2>3. Equal-Width Columns</h2>
+  <div class="row">
+    <p class="col">Column 1</p>
+    <p class="col">Column 2</p>
+    <p class="col">Column 3</p>
+  </div>
+
+  <h2>4. Card Layout with Wrapping</h2>
+  <div class="cards">
+    <p class="card">Card 1</p>
+    <p class="card">Card 2</p>
+    <p class="card">Card 3</p>
+    <p class="card">Card 4</p>
+    <p class="card">Card 5</p>
+  </div>
+  
+  <h2>5. Sidebar + Content Layout</h2>
+  <div class="layout">
+    <p class="sidebar">Sidebar</p>
+    <p class="content">Main Content Area</p>
+  </div>
+
+  <h2>6. Space-Between Layout</h2>
+  <div class="space-between">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+  </div>
+
+  <h2>7. Column Direction</h2>
+  <div class="column-container">
+    <div>Top</div>
+    <div>Middle</div>
+    <div>Bottom</div>
+  </div>
+
+</body>
+</html>
