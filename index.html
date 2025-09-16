@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shubham Gautam - Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Shubham Gautam" />
+    <meta
+      name="description"
+      content="Portfolio of Shubham Gautam - Computer Science enthusiast, professor, and founder of EnjoyAlgorithms. Explore skills, projects, education, and contact details."
+    />
+    <meta
+      name="keywords"
+      content="Shubham Gautam, Portfolio, Computer Science, Data Structures, Algorithms, Web Development, System Design, Teaching"
+    />
+    <meta name="robots" content="index, follow" />
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 20px auto;
+        line-height: 1.6;
+        background-color: #ffffff;
+        max-width: 900px;
+        border: 1px solid #1d3557;
+        padding: 20px;
+        border-radius: 20px;
+      }
+      h1 {
+        color: #e63946;
+        text-align: center;
+        font-weight: bold;
+      }
+      h2 {
+        margin-top: 30px;
+        color: #1d3557;
+      }
+      pre {
+        background: #f1faee;
+        padding: 10px;
+        border-left: 3px solid #e63946;
+        overflow-x: auto;
+      }
+      a {
+        color: #0000ff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      h4 {
+        margin-top: 40px;
+        text-align: center;
+      }
+      /* Flexbox Navigation */
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        background: #f8f9fa;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+      }
+      nav a {
+        color: #1d3557;
+        padding: 6px 12px;
+      }
+      nav a:hover {
+        background: #e63946;
+        color: white;
+        border-radius: 5px;
+      }
+      /* Profile Image */
+      img {
+        display: block;
+        margin: 15px auto;
+        max-width: 200px;
+        border-radius: 50%;
+        border: 2px solid #1d3557;
+      }
+      /* Skills Grid */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+      }
+      .skill-card {
+        background: #f1faee;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        text-align: center;
+      }
+      /* Projects Grid */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+        margin: 20px 0;
+      }
+      .project-card {
+        background: #ffffff;
+        border: 2px solid #1d3557;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+      }
+      .project-card:hover {
+        background: #f1faee;
+        transform: scale(1.03);
+        transition: 0.4s;
+      }
+      /* Table Styling */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: 15px;
+      }
+      th,
+      td {
+        border: 1px solid #1d3557;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: #e63946;
+        color: white;
+      }
+      footer {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      /* ✅ Mobile Responsiveness */
+      @media (max-width: 600px) {
+        body {
+          margin: 10px;
+          padding: 15px;
+          border-radius: 12px;
+        }
+        h1 {
+          font-size: 24px;
+        }
+        h2 {
+          font-size: 20px;
+        }
+        nav {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+        nav a {
+          display: block;
+          width: 100%;
+          text-align: left;
+          padding: 8px;
+        }
+        img {
+          max-width: 140px;
+        }
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+        table,
+        th,
+        td {
+          font-size: 12px;
+          padding: 6px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <h1 id="top">Shubham Gautam</h1>
+      <p style="text-align: center; font-size: large">
+        Welcome to my <strong>Portfolio Website</strong>
+      </p>
+    </header>
+
+    <!-- Navigation with Flexbox -->
+    <nav>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- About -->
+    <h2>About Me</h2>
+    <img src="images/shubham-gautam.jpeg" alt="Profile Picture" />
+    <p>
+      I am a <b>Computer Science enthusiast</b>. Nothing brings me greater joy
+      than guiding tech professionals in mastering computer science and helping
+      them achieve their dream success. I am on a mission to simplify computer
+      science concepts for various learners and empower them to become confident
+      problem solvers.
+    </p>
+    <pre>
+"Education is not the learning of facts,
+but the training of the mind to think."
+- Albert Einstein
+    </pre>
+
+    <hr />
+
+    <!-- Skills with Grid -->
+    <h2 id="skills">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">CS Math</div>
+      <div class="skill-card">DSA</div>
+      <div class="skill-card">Software Engineering</div>
+      <div class="skill-card">System Design</div>
+      <div class="skill-card">Web Development</div>
+      <div class="skill-card">Entrepreneurship</div>
+      <div class="skill-card">Program Management</div>
+      <div class="skill-card">Product Growth</div>
+      <div class="skill-card">Public Speaking</div>
+      <div class="skill-card">C, C++, Java, JS</div>
+    </div>
+
+    <hr />
+
+    <!-- Projects with Grid -->
+    <h2 id="projects">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">Institute of Innovation</div>
+      <div class="project-card">EnjoyAlgorithms</div>
+      <div class="project-card">EnjoyMathematics</div>
+      <div class="project-card">Mindorks</div>
+      <div class="project-card">AfterAcademy</div>
+      <div class="project-card">Jagran Youth Parliament</div>
+      <div class="project-card">Janhit Jagran</div>
+      <div class="project-card">Toppers Talk</div>
+      <div class="project-card">Mercedez NTG 5.1</div>
+      <div class="project-card">LMS App Boeing</div>
+    </div>
+
+    <hr />
+
+    <!-- Education Table -->
+    <h2 id="experience">Education and Experience</h2>
+    <table>
+      <tr>
+        <th>Role/Degree</th>
+        <th>Institution/Company</th>
+        <th>Year</th>
+      </tr>
+      <tr>
+        <td>Professor</td>
+        <td>PW IOI</td>
+        <td>2024-Present</td>
+      </tr>
+      <tr>
+        <td>Founder</td>
+        <td>EnjoyAlgorithms</td>
+        <td>2019-Present</td>
+      </tr>
+      <tr>
+        <td>Vice President</td>
+        <td>Mindorks</td>
+        <td>2018-19</td>
+      </tr>
+      <tr>
+        <td>Program Manager</td>
+        <td>ToughHope Consultancy</td>
+        <td>2016-18</td>
+      </tr>
+      <tr>
+        <td>STMT</td>
+        <td>HCL Technologies</td>
+        <td>2014-15</td>
+      </tr>
+      <tr>
+        <td>B.Tech - Electronics</td>
+        <td>IIT BHU</td>
+        <td>2010-14</td>
+      </tr>
+      <tr>
+        <td>12th Grade</td>
+        <td>Super 30</td>
+        <td>2009-10</td>
+      </tr>
+    </table>
+
+    <!-- Contact -->
+    <h2 id="contact">Contact</h2>
+    <p>
+      Connect with me:
+      <a
+        href="https://www.linkedin.com/in/shubhamgautamsuper30/"
+        target="_blank"
+        >LinkedIn Profile</a
+      >
+      <br />
+      <a href="mailto:shubham@example.com">Email Me</a>
+    </p>
+
+    <hr />
+
+    <!-- Footer -->
+    <footer>
+      <h4>Thank you for visiting my portfolio!</h4>
+      <p>Keep learning, keep growing!</p>
+      <a href="#top">Back to Top</a>
+    </footer>
+  </body>
+</html>
