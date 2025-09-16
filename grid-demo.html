@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Grid Use Cases Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h2 {
+        margin-top: 40px;
+        color: darkgreen;
+      }
+
+      .simple-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .simple-grid p {
+        background: lightblue;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .responsive-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .responsive-grid p {
+        background: lightcoral;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .span-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .span-grid p {
+        background: lightgreen;
+        text-align: center;
+        padding: 10px;
+      }
+      .span-grid .wide {
+        grid-column: span 2;
+        grid-row: span 1;
+        background: darkseagreen;
+      }
+      .span-grid .tall {
+        grid-row: span 2;
+        grid-column: span 2;
+        background: seagreen;
+        color: white;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h2>1. Simple Grid (3 Fixed Columns)</h2>
+    <div class="simple-grid">
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>4</p>
+      <p>5</p>
+      <p>6</p>
+    </div>
+
+    <h2>2. Responsive Grid (auto-fit)</h2>
+    <div class="responsive-grid">
+      <p>Box 1</p>
+      <p>Box 2</p>
+      <p>Box 3</p>
+      <p>Box 4</p>
+      <p>Box 5</p>
+      <p>Box 6</p>
+    </div>
+
+    <h2>3. Grid with Spanning</h2>
+    <div class="span-grid">
+      <p class="wide">Spans 2 Columns</p>
+      <p>2</p>
+      <p class="tall">Spans 2 Rows</p>
+      <p>4</p>
+      <p>5</p>
+      <p>4</p>
+      <p>5</p>
+    </div>
+  </body>
+</html>
