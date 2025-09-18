@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+      }
+
+      /* Float Left Example */
+      .float-left {
+        float: left;
+        margin: 15px;
+        width: 150px;
+        height: 150px;
+      }
+
+      /* Float Right Example */
+      .float-right {
+        float: right;
+        margin: 15px;
+        width: 150px;
+        height: 150px;
+      }
+
+      /* Float None */
+      .float-none {
+        float: none; /* cancels float */
+        margin: 15px;
+        width: 150px;
+        height: 150px;
+      }
+
+      /* Alternative to clearfix: use overflow */
+      .container {
+        padding: 10px;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Float Demo</h1>
+
+    <!-- Example 1: Float Left -->
+    <div>
+      <h2>Float Left</h2>
+      <img
+        src="images/free-nature-images.jpg"
+        alt="Float Left"
+        class="float-left"
+      />
+      <p>
+        This image is floated to the left. The text flows around the right side
+        of the image. We didn’t need clearfix here because the text naturally
+        keeps the parent stretched. Floats are great for small media inside
+        articles — think of text wrapping around an image in a news story.
+        Floats are great for small media inside articles — think of text
+        wrapping around an image in a news story. Floats are great for small
+        media inside articles — think of text wrapping around an image in a news
+        story. Floats are great for small media inside articles — think of text
+        wrapping around an image in a news story.
+      </p>
+    </div>
+
+    <!-- Example 2: Float Right -->
+    <div>
+      <h2>Float Right</h2>
+      <img
+        src="images/free-nature-images.jpg"
+        alt="Float Right"
+        class="float-right"
+      />
+      <p>
+        This image is floated to the right. The text flows around the left side
+        of the image. Again, no clearfix is needed because the text pushes the
+        container's height. This image is floated to the right. The text flows
+        around the left side of the image. Again, no clearfix is needed because
+        the text pushes the container's height. This image is floated to the
+        right. The text flows around the left side of the image. Again, no
+        clearfix is needed because the text pushes the container's height.
+      </p>
+    </div>
+
+    <!-- Example 3: Float None -->
+    <div>
+      <h2>Float None</h2>
+      <img
+        src="images/free-nature-images.jpg"
+        alt="Float None"
+        class="float-none"
+      />
+      <p>
+        This image has float: none, so it stays in the normal flow of the
+        document. The text does not wrap around it — instead, it appears below
+        or above like a normal block element. This image has float: none, so it
+        stays in the normal flow of the document. The text does not wrap around
+        it — instead, it appears below or above like a normal block element. The
+        text does not wrap around it — instead, it appears below or above like a
+        normal block element.
+      </p>
+    </div>
+
+    <!-- Example 3: Both Left and Right -->
+    <div>
+      <h2>Float Left + Right</h2>
+      <img
+        src="images/free-nature-images.jpg"
+        alt="Float Left"
+        class="float-left"
+      />
+      <img
+        src="images/free-nature-images.jpg"
+        alt="Float Right"
+        class="float-right"
+      />
+      <p>
+        Here, we floated one image left and another right. The text fills the
+        space in between. The parent container wraps. Here, we floated one image
+        left and another right. The text fills the space in between. The parent
+        container wraps. Here, we floated one image left and another right. The
+        text fills the space in between. The parent container wraps.
+      </p>
+    </div>
+  </body>
+</html>
