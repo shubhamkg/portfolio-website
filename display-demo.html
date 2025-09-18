@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inline-Block Example</title>
+  <style>
+    .block {
+      display: block;
+      background: lightblue;
+      border: 2px solid blue;
+      width: 100px;
+      height: 50px;
+      margin: 5px;
+    }
+    .inline {
+      display: inline;
+      background: lightcoral;
+      border: 2px solid red;
+      width: 100px;   /* ❌ ignored in inline */
+      height: 100px;   /* ❌ ignored in inline */
+      margin: 5px;
+    }
+    .inline-block {
+      display: inline-block;
+      background: lightgreen;
+      border: 2px solid green;
+      width: 100px;   /* ✅ works */
+      height: 50px;   /* ✅ works */
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Block</h2>
+  <div class="block">Block 1</div>
+  <div class="block">Block 2</div>
+
+  <h2>Inline</h2>
+  <span class="inline">Inline 1</span>
+  <span class="inline">Inline 2</span>
+
+  <h2>Inline-Block</h2>
+  <span class="inline-block">Inline-Block 1</span>
+  <span class="inline-block">Inline-Block 2</span>
+  <span class="inline-block">Inline-Block 3</span>
+
+</body>
+</html>
