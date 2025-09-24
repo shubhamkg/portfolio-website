@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        background: #f4f6f9;
+      }
+
+      .sidebar {
+        flex: 1;
+        background: lightgray;
+        padding: 15px;
+        border-radius: 5px;
+      }
+
+      .nav-link {
+        display: block;
+        padding: 8px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        margin: 10px;
+        border-radius: 4px;
+        background-color: #0984e3;
+      }
+
+      .main {
+        flex: 4;
+        padding: 20px;
+      }
+
+      header {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .profile {
+        display: flex;
+        gap: 15px;
+      }
+
+      .profile button {
+        background: #0984e3;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .dashboard {
+        margin-top: 12px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+        gap: 20px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+      }
+
+      .progress-bar {
+        height: 10px;
+        background: #dfe6e9;
+        border-radius: 5px;
+      }
+
+      .progress {
+        height: 100%;
+        background: #00b894;
+        width: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div>
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Analytics</a>
+        <a href="#" class="nav-link">Messages</a>
+        <a href="#" class="nav-link">Calendar</a>
+        <a href="#" class="nav-link">Settings</a>
+      </div>
+    </div>
+
+    <div class="main">
+      <header>
+        <h1>Welcome Back, Student</h1>
+        <div class="profile">
+          <button>Profile</button>
+          <button>Logout</button>
+        </div>
+      </header>
+
+      <section class="dashboard">
+        <div class="card">
+          <h3>Assignments</h3>
+          <p>3 pending assignments due this week.</p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 60%"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Grades</h3>
+          <p>Your average grade: <b>A-</b></p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Messages</h3>
+          <p>2 new messages from professors.</p>
+        </div>
+
+        <div class="card">
+          <h3>Upcoming Exam</h3>
+          <p>Mathematics exam on Monday, 9:00 AM.</p>
+        </div>
+
+        <div class="card">
+          <h3>Projects</h3>
+          <p>Final project submission due next week.</p>
+        </div>
+
+        <div class="card">
+          <h3>Attendance</h3>
+          <p>Current attendance: <b>92%</b></p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 92%"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Events</h3>
+          <p>Workshop on AI this Friday at 3 PM.</p>
+        </div>
+
+        <div class="card">
+          <h3>Feedback</h3>
+          <p>New feedback received from professors.</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
