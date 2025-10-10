@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Clone </title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+      }
+
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      a:hover {
+        color: #ff0000;
+      }
+
+      .sidebar {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-right: 1px solid #ccc;
+        height: 100vh;
+        overflow-y: auto;
+        background-color: #fff;
+      }
+
+      .sidebar h2 {
+        color: #ff0000;
+        margin-top: 0;
+      }
+
+      .main-content {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: #ff0000;
+      }
+
+      .search-bar {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        max-width: 500px;
+      }
+
+      .search-bar input {
+        width: 100%;
+        padding: 15px;
+        border-radius: 20px 0px 0px 20px;
+      }
+
+      .search-bar button {
+        background-color: #ff0000;
+        border-radius: 0 20px 20px 0;
+        padding: 20px;
+        cursor: pointer;
+      }
+
+      .categories {
+        display: flex;
+        gap: 10px;
+        padding: 20px;
+        overflow-x: auto;
+      }
+
+      .categories button {
+        padding: 16px;
+        border-radius: 15px;
+        background-color: #eee;
+        cursor: pointer;
+      }
+
+      .categories button:hover {
+        background-color: #ff0000;
+        color: white;
+      }
+
+      .video-grid {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+        gap: 20px;
+      }
+
+      .video-card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .video-card iframe {
+        width: 100%;
+        border: none;
+      }
+
+      .video-info {
+        padding: 15px;
+      }
+
+      @media (max-width: 700px) {
+        body {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          flex-direction: row;
+          justify-content: space-around;
+          border-right: none;
+          border-bottom: 1px solid #ccc;
+        }
+
+        .categories {
+          flex-wrap: nowrap;
+          overflow-x: scroll;
+        }
+
+        header {
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>YouTube</h2>
+      <a href="#">Home</a>
+      <a href="#">Trending</a>
+      <a href="#">Music</a>
+      <a href="#">Gaming</a>
+      <a href="#">Learning</a>
+      <a href="#">Settings</a>
+    </div>
+
+    <div class="main-content">
+      <header>
+        <div class="logo">YouTube Clone</div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+          <button>🔍</button>
+        </div>
+      </header>
+
+      <div class="categories">
+        <button>All</button>
+        <button>Music</button>
+        <button>Gaming</button>
+        <button>Education</button>
+        <button>Movies</button>
+        <button>Sports</button>
+        <button>News</button>
+        <button>Podcasts</button>
+      </div>
+
+      <!-- Video Grid -->
+      <div class="video-grid">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+          <div class="video-info">
+            <h3>Relaxing Nature Sounds</h3>
+            <p>Nature Channel • 2M views</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4"></iframe>
+          <div class="video-info">
+            <h3>Motivational Speech</h3>
+            <p>Inspire Talks • 5M views</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/K4TOrB7at0Y"></iframe>
+          <div class="video-info">
+            <h3>Chill Music Playlist</h3>
+            <p>LoFi Beats • 1.2M views</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/sBws8MSXN7A"></iframe>
+          <div class="video-info">
+            <h3>Learn HTML in 15 Minutes</h3>
+            <p>Code Academy • 800K views</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/E7wJTI-1dvQ"></iframe>
+          <div class="video-info">
+            <h3>Beautiful Piano Music</h3>
+            <p>Calm Studio • 3.4M views</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/ktvTqknDobU"></iframe>
+          <div class="video-info">
+            <h3>Imagine Dragons - Radioactive</h3>
+            <p>VEVO • 1.2B views</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
