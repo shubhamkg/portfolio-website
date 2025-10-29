@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+<body>
+
+<h1>Registration Form</h1>
+
+<form action="/submit_form.js" method="POST">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" autocomplete="off" minlength="3" size="20" value="Shubham Gautam"><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required minlength="6"><br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob"><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="25" step="1"><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="Male"><label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="Female"><label for="female">Female</label>
+    <br><br>
+
+    <label>Skills:</label><br>
+    <input type="checkbox" id="html" name="skills" value="HTML"><label for="html">HTML</label><br>
+    <input type="checkbox" id="css" name="skills" value="CSS"><label for="css">CSS</label><br>
+    <input type="checkbox" id="js" name="skills" value="JavaScript"><label for="js">JavaScript</label><br><br>
+
+    <label for="website">Website URL:</label>
+    <input type="url" id="website" name="website" placeholder="https://example.com" readonly><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="example@gmail.com"><br><br>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone"><br><br>
+
+    <label for="meeting">Meeting Time:</label>
+    <input type="datetime-local" id="meeting" name="meeting"><br><br>
+
+    <label for="favcolor">Favorite Color:</label>
+    <input type="color" id="favcolor" name="favcolor"><br><br>
+
+    <label for="city">Choose City:</label>
+    <input list="cities" id="city" name="city" placeholder="Start typing...">
+    <datalist id="cities">
+        <option value="Lucknow">
+        <option value="Delhi">
+        <option value="Mumbai">
+        <option value="Bengaluru">
+    </datalist><br><br>
+
+    <label for="state">State:</label>
+    <select id="state" name="state">
+        <option value="">--Select State--</option>
+        <option value="UP">Uttar Pradesh</option>
+        <option value="DL">Delhi</option>
+        <option value="MH">Maharashtra</option>
+        <option value="KA">Karnataka</option>
+    </select>
+    <br><br>
+
+    <label for="courses">Select Courses:</label><br>
+    <select multiple id="courses" name="courses" size="4">
+        <option value="BCA">BCA</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="B.Sc">B.Sc</option>
+        <option value="M.Tech">M.Tech</option>
+    </select>
+    <br><br>
+
+    <label for="about">About You:</label><br>
+    <textarea id="about" name="about" rows="4" cols="40" maxlength="15"></textarea><br><br>
+
+    <label for="resume">Upload Resume:</label>
+    <input type="file" id="resume" name="resume" accept="image/*" multiple><br><br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+</form>
+
+</body>
+</html>
