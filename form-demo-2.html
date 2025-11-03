@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        margin: 20px;
+        padding: 20px;
+      }
+
+      .signup-form {
+        padding: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 500px;
+        background-color: #ffffff;
+        border-radius: 15px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      label {
+        font-weight: 600;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 18px;
+        border: 1px solid #6a5acd;
+        border-radius: 10px;
+      }
+
+      input[type="file"] {
+        border: none;
+        padding: 5px;
+      }
+
+      .gender-group {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin-bottom: 18px;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        background-color: #6a5acd;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #5745c3;
+      }
+
+      .extra {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+      }
+
+      .extra a {
+        color: #6a5acd;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="signup-form" method="get" action="/thank-you.html" enctype="multipart/form-data">
+      <h2>Create Your Account</h2>
+
+      <label for="fullname">Full Name</label>
+      <input
+        type="text"
+        id="fullname"
+        name="fullname"
+        placeholder="Enter your full name"
+        pattern="[A-Za-z ]{3,50}"
+        title="Name should only contain letters and spaces (3–50 characters)"
+      />
+
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter username"
+        pattern="[A-Za-z0-9_]{4,15}"
+        title="4–15 characters: letters, numbers, or underscores"
+      />
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="example@email.com"
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        title="Enter a valid email address (e.g., name@example.com)"
+      />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+        pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W).{8,}"
+        title="Minimum 8 characters (letters, numbers, or symbols)"
+      />
+
+      <label for="confirm-password">Confirm Password</label>
+      <input
+        type="password"
+        id="confirm-password"
+        name="confirm-password"
+        placeholder="Re-enter password"
+      />
+
+      <label for="phone">Phone Number</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="10-digit number"
+        pattern="(\+91|91|0)?[6-9]\d{9}"
+        title="Enter a 10-digit valid phone number"
+      />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" />
+
+      <label>Gender</label>
+      <div class="gender-group">
+        <label
+          ><input type="radio" name="gender" value="male" checked /> Male</label
+        >
+        <label
+          ><input type="radio" name="gender" value="female" /> Female</label
+        >
+      </div>
+
+      <label for="address">Address</label>
+      <textarea
+        id="address"
+        name="address"
+        rows="4"
+        placeholder="Enter your address"
+      ></textarea>
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="">-- Select Country --</option>
+
+        <optgroup label="Asia">
+          <option value="india" selected>India</option>
+          <option value="india">Sri Lanka</option>
+        </optgroup>
+
+        <optgroup label="North America">
+          <option value="usa">United States</option>
+          <option value="canada" disabled>Canada</option>
+        </optgroup>
+
+        <optgroup label="Europe">
+          <option value="uk">United Kingdom</option>
+          <option value="uk">Germany</option>
+        </optgroup>
+
+        <optgroup label="Oceania">
+          <option value="australia">Australia</option>
+        </optgroup>
+      </select>
+
+      <label for="card">Card Number</label>
+      <input
+        type="text"
+        id="card"
+        name="card"
+        placeholder="Enter 12-digit card number"
+        pattern="(\d{4}[-\s]?){2}\d{4}"
+        title="Card number must be exactly 12 digits"
+        maxlength="12"
+      />
+
+      <label for="resume">Upload Resume</label>
+      <input
+        type="file"
+        id="resume"
+        name="resume"
+        accept=".pdf,.doc,.docx"
+        title="Upload your resume (PDF, DOC, DOCX only)"
+      />
+
+      <label>
+        <input type="checkbox" name="terms" checked />
+        I agree to the <a href="#">Terms & Conditions</a>
+      </label>
+
+      <button type="submit">Sign Up</button>
+
+      <div class="extra">Already have an account? <a href="#">Login</a></div>
+    </form>
+  </body>
+</html>
