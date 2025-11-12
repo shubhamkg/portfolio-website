@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Flex & Grid Display Examples</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-light p-4">
+    <div class="container">
+      <h2 class="text-center mb-4 text-primary">
+        Bootstrap Flex and Grid Demo
+      </h2>
+
+      <div class="border p-3 mb-4">
+        <h5>Basic Flex Row</h5>
+        <div class="d-flex p-3 text-center gap-3">
+          <div class="p-3 bg-primary text-white ">Item 1</div>
+          <div class="p-3 bg-success text-white flex-fill">Item 2</div>
+          <div class="p-3 bg-danger text-white flex-fill">Item 3</div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4">
+        <h5>Column Direction</h5>
+        <div class="d-flex flex-column bg-light p-3 gap-3">
+          <div class="p-3 bg-info text-white">Column 1</div>
+          <div class="p-3 bg-warning text-dark">Column 2</div>
+          <div class="p-3 bg-secondary text-white">Column 3</div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4">
+        <h5>Justify Content</h5>
+        <div class="d-flex justify-content-around p-3">
+          <div class="p-3 bg-primary text-white">Start</div>
+          <div class="p-3 bg-success text-white">Center</div>
+          <div class="p-3 bg-danger text-white">End</div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4" style="height: 200px">
+        <h5>Align Items Center</h5>
+        <div class="d-flex align-items-center justify-content-around h-100">
+          <div class="p-3 bg-primary text-white">Item A</div>
+          <div class="p-3 bg-success text-white">Item B</div>
+          <div class="p-3 bg-danger text-white">Item C</div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4">
+        <h5>Align Self Demo</h5>
+        <div class="d-flex justify-content-around" style="height: 250px">
+          <div class="p-3 bg-primary text-white align-self-start">
+            align 1
+          </div>
+          <div class="p-3 bg-success text-white align-self-center">
+            align 2
+          </div>
+          <div class="p-3 bg-danger text-white align-self-end">
+            align 3
+          </div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4">
+        <h5>Responsive Flex</h5>
+        <div class="d-flex flex-md-column flex-sm-row p-3">
+          <div class="p-3 bg-primary text-white m-2">1</div>
+          <div class="p-3 bg-success text-white m-2">2</div>
+          <div class="p-3 bg-danger text-white m-2">3</div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4 bg-white">
+        <h5>Basic Grid System</h5>
+        <div class="row text-center">
+          <div class="col bg-primary text-white p-3">col</div>
+          <div class="col bg-success text-white p-3">col</div>
+          <div class="col bg-danger text-white p-3">col</div>
+        </div>
+
+        <div class="row mt-3 text-center">
+          <div class="col-4 bg-warning p-3">col-4</div>
+          <div class="col-8 bg-info p-3">col-8</div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4 bg-white">
+        <h5>Responsive Columns</h5>
+        <div class="row text-center">
+          <div class="col-sm-12 col-md-6 col-lg-4 bg-primary text-white p-3">
+            1
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-8 bg-success text-white p-3">
+            2
+          </div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4 bg-white">
+        <h5>Equal-Width Columns and Variable Width</h5>
+        <div class="row text-center">
+          <div class="col bg-primary text-white p-3">1</div>
+          <div class="col bg-success text-white p-3">2</div>
+          <div class="col-6 bg-danger text-white p-3">3 </div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4 bg-white">
+        <h5>Nested Grid Example</h5>
+        <div class="row">
+          <div class="col-md-8 bg-light border p-3">
+            Level 1: col-md-8
+            <div class="row mt-2">
+              <div class="col-4 bg-info text-white p-2">Nested col-6</div>
+              <div class="col-8 bg-warning text-dark p-2">Nested col-6</div>
+            </div>
+          </div>
+          <div class="col-md-4 bg-secondary text-white p-3">
+            Level 1: col-md-4
+          </div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4 bg-white">
+        <h5>Grid Alignment</h5>
+        <div class="row align-items-center text-center" style="height: 150px">
+          <div class="col bg-primary text-white p-3">Top</div>
+          <div class="col bg-success text-white p-3">Middle</div>
+          <div class="col bg-danger text-white p-3">Bottom</div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4 bg-white">
+        <h5>Justify Content </h5>
+        <div class="row justify-content-between text-center">
+          <div class="col-3 bg-primary text-white p-3">Box 1</div>
+          <div class="col-3 bg-success text-white p-3">Box 2</div>
+          <div class="col-3 bg-danger text-white p-3">Box 3</div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4 bg-white" style="height: 400px">
+        <h5>Align Content </h5>
+        <div class="row row-cols-4 text-center">
+          <div class="col bg-primary text-white p-3 m-1">Box 1</div>
+          <div class="col bg-success text-white p-3 m-1">Box 2</div>
+          <div class="col bg-danger text-white p-3 m-1">Box 3</div>
+          <div class="col bg-warning text-dark p-3 m-1">Box 4</div>
+          <div class="col bg-info text-white p-3 m-1">Box 5</div>
+          <div class="col bg-secondary text-white p-3 m-1">Box 6</div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4 bg-white" style="height: 300px">
+        <h5>
+          Align Self
+        </h5>
+        <div class="row text-center h-75">
+          <div class="col bg-primary text-white p-3 align-self-start">
+            align 1 
+          </div>
+          <div class="col bg-success text-white p-3 align-self-center">
+            align 2
+          </div>
+          <div class="col bg-danger text-white p-3 align-self-end">
+            align 3
+          </div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4 bg-white">
+        <h5>Justify Self Example</h5>
+        <div class="row text-center">
+          <div class="col d-flex justify-content-start">
+            <div class="bg-primary text-white p-3">Start</div>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <div class="bg-success text-white p-3">Center</div>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <div class="bg-danger text-white p-3">End</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border p-3 mb-4 bg-white">
+        <h5>Display Utilities </h5>
+        <div class="mb-3">
+          <span class="d-block bg-primary text-white p-2 mb-2">block 1</span>
+          <span class="d-block bg-success text-white p-2">block 2</span>
+        </div>
+
+        <div class="mb-3">
+          <span class="d-inline bg-warning p-2 text-dark">inline 1</span>
+          <span class="d-inline bg-info p-2 text-white">inline 2</span>
+        </div>
+
+        <div class="mb-3">
+          <span class="d-inline-block bg-danger text-white p-2"
+            >inline-block 1</span
+          >
+          <span class="d-inline-block bg-secondary text-white p-2"
+            >inline-block 2</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
