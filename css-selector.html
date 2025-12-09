@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Selectors Demo</title>
+
+    <style>
+      /* Universal Selector */
+      * {
+        margin: 8px;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Grouping Selector */
+      p,
+      div,
+      section,
+      h1,
+      h2,
+      h3 {
+        margin-bottom: 20px;
+      }
+
+      /* Primary Selectors */
+
+      /* Element Selector */
+      h1 {
+        color: blue;
+      }
+
+      /* Class Selector */
+      .highlight {
+        background-color: yellow;
+        padding: 5px;
+      }
+
+      /* ID Selector */
+      #special {
+        color: red;
+        font-weight: bold;
+      }
+
+      /* Relational Selectors */
+      /* Parent Child Selector */
+      div span {
+        color: purple;
+      }
+
+      /* Direct Child Selector (>) */
+      div > p {
+        background-color: lightblue;
+      }
+
+      /* Adjacent Sibling Selector */
+      h2 + p {
+        color: green;
+        font-weight: bold;
+      }
+
+      div + p {
+        color: brown;
+        font-weight: bold;
+      }
+
+      /* General Sibling Selector */
+      h3 ~ span {
+        border-left: 16px solid orange;
+        padding-left: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Selectors Demonstration</h1>
+
+    <p id="special">This paragraph uses an ID selector.</p>
+    <p class="highlight">This paragraph uses a class selector.</p>
+
+    <hr />
+
+    <div>
+      <p>This is a direct child of div.</p>
+      <span>This span is inside a div (styled using parent child).</span>
+      <section>
+        <p>This p is inside a section inside a div (NOT direct child).</p>
+        <span>This span is inside a div (styled using parent child).</span>
+      </section>
+      <p>This is a direct child of div.</p>
+    </div>
+
+    <hr />
+
+    <h2>Heading 2</h2>
+
+    <p>This paragraph is immediately after h2 (adjacent sibling).</p>
+    <p>This paragraph will NOT be selected by adjacent sibling.</p>
+
+    <hr />
+
+    <div>
+      <h3>Heading 3</h3>
+      <p>General sibling paragraph 1</p>
+      <p>General sibling paragraph 2</p>
+      <div>
+        <p>This p is inside a div and NOT selected by sibling selector.</p>
+      </div>
+      <span>This span is inside a div (styled using parent child).</span>
+      <p>General and adjacent sibling paragraph 3</p>
+    </div>
+
+    <p>Adjacent sibling paragraph</p>
+    <p>Adjacent sibling paragraph</p>
+
+    <h1>CSS Selectors Demonstration</h1>
+  </body>
+</html>
