@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      li:first-child {
+        color: red;
+        font-weight: bold;
+      }
+
+      ul :last-child {
+        color: blue;
+        font-weight: bold;
+      }
+
+      li:nth-child(5) {
+        color: green;
+        font-weight: bold;
+      }
+
+      ul :nth-child(6) {
+        color: green;
+        font-weight: bold;
+      }
+
+      ul :nth-child(2n) {
+        background: yellow;
+      }
+
+      p:nth-child(5) {
+        color: green;
+        font-weight: bold;
+      }
+
+      .container {
+        display: flex;
+        gap: 10px;
+      }
+
+      .card {
+        padding: 20px;
+        border: 1px solid #aaa;
+      }
+
+      .container .card:first-child {
+        background-color: lightgray;
+      }
+
+      .container .card:last-child {
+        background-color: lightblue;
+      }
+
+      .container .card:nth-child(2) {
+        background: lightgreen;
+      }
+
+      .container .card:nth-child(3) {
+        background: lightpink;
+      }
+
+      div p:nth-of-type(2) {
+        background: lightgreen;
+      }
+
+      p:nth-of-type(2n) {
+        border: 2px solid purple;
+      }
+
+      p:nth-of-type(2n + 1) {
+        padding-left: 10px;
+        background: #ffe4b2;
+      }
+
+      div p:nth-last-of-type(1) {
+        color: darkred;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Structural Pseudo Selector Demo</h2>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <p>Paragraph 2</p>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <p>Paragraph 3</p>
+      <li>Item 5</li>
+      <p>Paragraph 1</p>
+      <p>Paragraph 4</p>
+    </ul>
+
+    <hr />
+
+    <div class="container">
+      <div class="card">Card 1</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+      <div class="card">Card 4</div>
+    </div>
+    <hr />
+
+    <article>
+      <h2>Title</h2>
+      <p>Paragraph 1</p>
+      <p>Paragraph 2</p>
+      <p>Paragraph 2</p>
+      <span>Note</span>
+      <p>Paragraph 2</p>
+      <p>Paragraph 2</p>
+      <p>Paragraph 2</p>
+      <span>Note</span>
+    </article>
+    <hr />
+
+    <div>
+      <p>Paragraph 1</p>
+      <p>Paragraph 2</p>
+      <p>Paragraph 3</p>
+      <p>Paragraph 4</p>
+      <p>Paragraph 5</p>
+    </div>
+    <hr />
+
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
+  </body>
+</html>
