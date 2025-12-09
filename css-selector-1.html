@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      input[type="text"] {
+        background: lightblue;
+      }
+
+      p[id^="pro"] {
+        color: red;
+      }
+
+      img[src$=".jpg"] {
+        border: 4px solid black;
+      }
+
+      p[class*="hot"] {
+        background: yellow;
+      }
+
+      div[class~="sale"] {
+        border: 2px solid orange;
+      }
+
+      button:hover {
+        background-color: orange;
+        color: white;
+      }
+
+      button:active {
+        background-color: red;
+      }
+
+      input:focus {
+        border: 2px solid blue;
+        outline: none;
+      }
+
+      a:link {
+        color: blue;
+      }
+
+      a:visited {
+        color: purple;
+      }
+
+      input:enabled {
+        border: 4px solid black;
+      }
+
+      input:read-only {
+        background: #f8e8c6;
+        border: 2px dashed orange;
+      }
+
+      input:checked + label {
+        color: red;
+        font-weight: bold;
+      }
+
+      textarea:focus {
+        border: 2px solid purple;
+        outline: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Attribute Selector Demo</h2>
+    <input type="text" placeholder="light blue background" /><br /><br />
+
+    <p id="product1">red text</p>
+
+    <img src="/images/blue-background.jpg" width="80" height="60" alt="Image" />
+
+    <p class="not-hot-item">yellow background</p>
+
+    <div class="item sale">orange border</div>
+
+    <h2>Dynamic Pseudo-Class Demo</h2>
+
+    <button>Hover / Click</button><br /><br />
+
+    <a href="https://example.com" target="_blank">Visit Example.com</a>
+
+    <h2>Element State Pseudo-Class Demo</h2>
+
+    <input type="text" placeholder="Enabled input" /><br /><br />
+
+    <input type="text" placeholder="Disabled input" disabled /><br /><br />
+
+    <input type="text" value="Read-only input" readonly /><br /><br />
+
+    <input type="checkbox" id="chk1" checked />
+    <label for="chk1">Checked</label><br /><br />
+
+    <a href="#"> link</a><br /><br />
+
+    <textarea placeholder="Click to focus"></textarea>
+  </body>
+</html>
