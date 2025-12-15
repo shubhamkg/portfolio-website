@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Transform, Transition, Filter & Animation Demo</title>
+    <style>
+      .box {
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: lightgreen;
+        margin: 30px;
+        transition: 0.6s;
+      }
+
+      /* TRANSFORM DEMO */
+      .translate:hover {
+        transform: translate(40px, 20px);
+      }
+      .rotate:hover {
+        transform: rotate(40deg);
+      }
+      .scale:hover {
+        transform: scale(1.4);
+      }
+      .skew:hover {
+        transform: skew(20deg);
+      }
+
+      .multiple:hover {
+        transform: translateX(100px) rotate(30deg) scale(1.5);
+      }
+
+      /* FILTER DEMOS */
+      .filters img {
+        width: 120px;
+        height: 120px;
+        margin: 10px;
+        transition: 0.5s;
+      }
+
+      .blur:hover {
+        filter: blur(2px);
+      }
+      .gray:hover {
+        filter: grayscale(50%);
+      }
+      .invert:hover {
+        filter: invert(100%);
+      }
+      .opacity:hover {
+        filter: opacity(40%);
+      }
+      .sepia:hover {
+        filter: sepia(100%);
+      }
+      .hue:hover {
+        filter: hue-rotate(120deg);
+      }
+      .shadow:hover {
+        filter: drop-shadow(6px 6px 10px black);
+      }
+
+      /* ANIMATION DEMO */
+      .animate-box {
+        width: 120px;
+        height: 120px;
+        background: purple;
+        color: white;
+        margin-top: 20px;
+        animation: move 3s infinite alternate ease-in-out;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translateX(0);
+          background: purple;
+        }
+        50% {
+          transform: translateX(80px) rotate(30deg);
+          background: violet;
+        }
+        100% {
+          transform: translateX(160px) rotate(60deg);
+          background: magenta;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>2D Transform Effects (Hover)</h2>
+    <div class="box translate">Translate</div>
+    <div class="box rotate">Rotate</div>
+    <div class="box scale">Scale</div>
+    <div class="box skew">Skew</div>
+    <div class="box multiple">Multiple Transform</div>
+
+    <h2>Filter Effects (Hover)</h2>
+    <div class="filters">
+      <img class="blur" src="/images/free-nature-images.jpg" />
+      <img class="gray" src="/images/free-nature-images.jpg" />
+      <img class="invert" src="/images/free-nature-images.jpg" />
+      <img class="opacity" src="/images/free-nature-images.jpg"/>
+      <img class="sepia" src="/images/free-nature-images.jpg" />
+      <img class="hue" src="/images/free-nature-images.jpg" />
+      <img class="shadow" src="/images/free-nature-images.jpg" />
+    </div>
+
+    <h2>Animation Example</h2>
+    <div class="animate-box">Animate</div>
+  </body>
+</html>
