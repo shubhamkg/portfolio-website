@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Targeting</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      .box {
+        border: 1px solid black;
+        padding: 8px;
+        margin: 5px 0;
+      }
+
+      .special {
+        background-color: #f2f2f2;
+      }
+
+      li {
+        padding: 5px;
+        border: 1px dashed gray;
+        margin: 3px 0;
+      }
+
+      button {
+        margin: 4px;
+        padding: 6px 10px;
+        cursor: pointer;
+      }
+
+      .content-box {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #aaa;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="title">DOM Targeting Methods – Live Demo</h1>
+
+    <div id="container">
+      <p class="box" name="para">Paragraph 1</p>
+      <p class="box" name="para">Paragraph 2</p>
+      <p class="box special" name="para">Paragraph 3</p>
+
+      <ul id="list">
+        <li class="item">Item A</li>
+        <li class="item">Item B</li>
+        <li class="item">Item C</li>
+      </ul>
+    </div>
+    <hr />
+
+    <h3>Click buttons to demonstrate DOM targeting</h3>
+
+    <button onclick="byId()">getElementById()</button>
+    <button onclick="byName()">getElementsByName()</button>
+    <button onclick="byClass()">getElementsByClassName()</button>
+    <button onclick="byTag()">getElementsByTagName()</button>
+    <button onclick="qs()">querySelector()</button>
+    <button onclick="qsAll()">querySelectorAll()</button>
+    <button onclick="hierarchy()">DOM Hierarchy + Index</button>
+    <button onclick="changeContent()">Change HTML Content</button>
+
+    <div id="content" class="content-box">
+      <b>Original Content:</b> This text will change.
+    </div>
+
+    <script>
+      function byId() {
+        const title = document.getElementById("title");
+        title.style.color = "blue";
+      }
+
+      function byName() {
+        const paras = document.getElementsByName("para");
+        paras[0].style.background = "lightyellow";
+      }
+
+      function byClass() {
+        const boxes = document.getElementsByClassName("box");
+        boxes[1].style.border = "2px solid red";
+      }
+
+      function byTag() {
+        const items = document.getElementsByTagName("li");
+
+        for (let i = 0; i < items.length; i++) {
+          items[i].style.background = "lightgreen";
+        }
+      }
+
+      function qs() {
+        const firstBox = document.querySelector(".box");
+        firstBox.style.color = "purple";
+      }
+
+      function qsAll() {
+        const allBoxes = document.querySelectorAll(".box");
+
+        for (let i = 0; i < allBoxes.length; i++) {
+          allBoxes[i].style.fontWeight = "bold";
+        }
+      }
+
+      function hierarchy() {
+        const list = document.getElementById("list");
+        list.children[1].style.color = "red";
+      }
+
+      // innerHTML demo
+      function changeContent() {
+        document.getElementById("content").innerHTML =
+          "<h4>Updated Content!</h4> <p>This content was changed using <b>innerHTML</b>.</p>";
+      }
+    </script>
+  </body>
+</html>
