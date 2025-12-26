@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript DOM Features Demo</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      .box {
+        padding: 10px;
+        border: 2px solid black;
+        margin-bottom: 10px;
+      }
+
+      .highlight {
+        background-color: lightblue;
+      }
+
+      .active {
+        border-color: red;
+      }
+
+      #docOutput {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px dashed gray;
+        background: #f9f9f9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2 id="title">JavaScript DOM Demo</h2>
+
+    <p class="box" id="para">This is a paragraph.</p>
+
+    <img
+      id="img"
+      src="/images/blue-background.jpg"
+      width="200"
+      alt="demo image"
+    />
+
+    <br /><br />
+
+    <button onclick="changeElements()">Change Elements</button>
+    <button onclick="changeAttributes()">Change Attributes</button>
+    <button onclick="changeStyles()">Change Styles</button>
+    <button onclick="removeElements()">Remove Element</button>
+    <button onclick="addElements()">Add Element</button>
+    <button onclick="showDocumentInfo()">Show Document Info</button>
+
+    <div id="docOutput">Document info will appear here...</div>
+
+    <script>
+      /* Change HTML elements */
+      function changeElements() {
+        const para = document.getElementById("para");
+        document.getElementById("title").innerHTML = "Title Changed!";
+        para.innerHTML = "Paragraph text updated.";
+
+        // append()
+        para.append(" (Appended text)");
+      }
+
+      /* Change HTML attributes */
+      function changeAttributes() {
+        const img = document.getElementById("img");
+        img.setAttribute("src", "/images/free-nature-images.jpg");
+
+        const imgSrc = img.getAttribute("src");
+        document.getElementById("title").innerText =
+          "Current Image Source: " + imgSrc;
+
+        img.removeAttribute("width");
+      }
+
+      /* Change CSS styles and classList methods */
+      function changeStyles() {
+        const para = document.getElementById("para");
+        para.style.color = "white";
+        para.style.backgroundColor = "green";
+        para.style.fontSize = "20px";
+
+        para.classList.add("highlight");
+        para.classList.toggle("active");
+
+        if (para.classList.contains("highlight")) {
+          document.getElementById("title").innerText =
+            "Paragraph has 'highlight' class";
+        }
+      }
+
+      /* Remove existing HTML elements */
+      function removeElements() {
+        const p = document.getElementById("para");
+        p.remove();
+      }
+
+      /* Add new HTML elements and attributes */
+      function addElements() {
+        const newDiv = document.createElement("div");
+        newDiv.innerText = "I am a newly added element";
+        newDiv.className = "box";
+        newDiv.classList.add("highlight");
+        newDiv.setAttribute("id", "newDiv");
+
+        document.body.append(newDiv);
+      }
+
+      /* Show important document properties and methods */
+      function showDocumentInfo() {
+        let output = "";
+
+        // Document properties
+        output += "<b>Document Title:</b> " + document.title + "<br>";
+        output += "<b>Document URL:</b> " + document.URL + "<br>";
+        output += "<b>Document Domain:</b> " + document.domain + "<br>";
+
+        // Document methods
+        const allDivs = document.getElementsByTagName("div");
+        output += "<b>Total Divs:</b> " + allDivs.length + "<br>";
+
+        const firstBox = document.querySelector(".box");
+        output += "<b>First element with class 'box':</b> " + firstBox.id + "<br>";
+
+        const allBoxes = document.querySelectorAll(".box");
+        output += "<b>All elements with class 'box':</b> " + allBoxes.length + "<br>";
+
+        document.getElementById("docOutput").innerHTML = output;
+      }
+    </script>
+  </body>
+</html>
